@@ -1,6 +1,6 @@
 ## WKB CLI
 
-Command line tool for dumping WKB metadata.
+Command line tool for dumping WKB metadata. Interface for [nathancahill/wkb](https://github.com/nathancahill/wkb).
 
 ## Installation
 
@@ -14,9 +14,7 @@ $ go install github.com/nathancahill/wkb-cli
 $ wkb-cli rast.bin
 ```
 
-## Usage with PostGIS
-
-Dump WKB from PostGIS at any point to a hex file:
+With PostGIS, dump WKB from PostGIS at any point to a hex file:
 
 ```
 > COPY (SELECT ST_AsBinary(rast) FROM table LIMIT 1) to 'rast.hex';
